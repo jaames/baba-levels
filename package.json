@@ -1,0 +1,31 @@
+{
+  "name": "baba-levels",
+  "private": true,
+  "description": "",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "rollup -c --watch --environment DEV_SERVER,BUILD:development",
+    "dev": "rollup -c --environment BUILD:development",
+    "build": "rollup -c --environment BUILD:production"
+  },
+  "dependencies": {
+    "fflate": "^0.7.1",
+    "svelte": "^3.39.0",
+    "svelte-navigator": "^3.1.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@tsconfig/svelte": "^2.0.1",
+    "parcel": "^2.0.1",
+    "rollup": "^2.60.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-import-css": "^3.0.2",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte-check": "^2.2.8",
+    "svelte-preprocess": "^4.9.8",
+    "typescript": "^4.4.4"
+  }
+}
