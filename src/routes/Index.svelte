@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { Link } from 'svelte-navigator';
   import { babaApi, babaAssets } from '../core';
 

@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
   import { babaApi, babaAssets } from '../core';
 
   export let code;

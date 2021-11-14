@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import { Router, Link, Route } from 'svelte-navigator';
   import Index from './routes/Index.svelte';
   import Level from './routes/Level.svelte';
 </script>
 
-<Router>
+<Router basepath="/baba-levels">
   <nav class="Nav Wrapper">
     <div class="NavGroup NavGroup--left">
       <div class="Intro">
