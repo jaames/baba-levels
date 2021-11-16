@@ -12,17 +12,20 @@
   };
 </script>
 
-<div>
-  {#await getLevelInfo(code)}
-    <!-- promise is pending -->
-    <p>Loading...</p>
-  {:then level}
-    <img class="LevelThumb" src="{getLevelThumb(code)}" alt="">
-    <div>{level.name}</div>
-    <div>{level.author}</div>
-    <div>{level.difficulty}</div>
-  {:catch error}
-    <!-- promise was rejected -->
-    <p>Error fetching level: {error.message}</p>
-  {/await}
-</div>
+{#await getLevelInfo(code)}
+  <!-- promise is pending -->
+  <div class="Status">Loading...</div>
+{:then level}
+  <div class="LevelDetail">
+    <img class="LevelDetail__thumb LevelThumb" src="{getLevelThumb(code)}" alt="">
+    <div class="LevelDetail__info">
+      <h3 class="LevelDetail__title">{level.name}</h3>
+      <div class="LevelDetail__author">By {level.author}</div>
+      <div class="LevelDetail__difficulty">Difficulty: {level.difficulty}</div>
+      <p class="LevelDetail__code">Code: {code}</p>
+    </div>
+  </div>
+{:catch error}
+  <!-- promise was rejected -->
+  <div class="Status">Error fetching level</div>
+{/await}
