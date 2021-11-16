@@ -49,6 +49,7 @@ export default {
       open: true,
       openPage: '/baba-levels',
       historyApiFallback: true,
+      historyApiFallback: '/404.html',
       contentBase: ['dist', 'test']
     }),
     devserver && livereload({

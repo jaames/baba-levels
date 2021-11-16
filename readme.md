@@ -2,7 +2,7 @@
 
 Browse user-created levels from the new [Baba Is You](https://hempuli.com/baba/) level editor update, on the web!
 
-[Check it out here](jaames.github.io/baba-levels/)
+[Check it out here](https://jaames.github.io/baba-levels/)
 
 This is a simple proof of concept I made in a day, so it isn't terribly fleshed out. If there's enough interest I may look into adding [more features](#todo). :)
 
