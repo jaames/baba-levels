@@ -78,7 +78,9 @@ a.link {
 
 .Nav {
   display: flex;
+  flex-wrap: wrap;
   height: 128px;
+  font-size: .9em;
 }
 
 .NavGroup {
@@ -95,11 +97,23 @@ a.link {
 }
 
 .NavGroup--left {
-  margin-right: auto;
+  width: 100%;
 }
 
 .NavGroup--right {
-  margin-left: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .NavGroup--left {
+    width: auto;
+    margin-right: auto;
+  }
+  
+  .NavGroup--right {
+    width: auto;
+    margin-left: auto;
+  }
 }
 
 .Intro {}
@@ -151,10 +165,12 @@ a.link {
 }
 
 .LevelThumb {
-  width: 432px;
-  height: 224px;
   display: block;
   image-rendering: pixelated;
+  max-width: 432px;
+  max-height: 224px;
+  width: auto;
+  height: auto;
 }
 
 .LevelList {
@@ -177,9 +193,17 @@ a.link {
 }
 
 .LevelList__body {
+  width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 24px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .LevelList__body {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .LevelList__nav {
@@ -213,8 +237,9 @@ a.link {
 }
 
 .LevelCard__thumb {
-  width: 432px;
-  height: 224px;
+  width: 100%;
+  /* width: 432px;
+  height: 224px; */
   display: block;
   image-rendering: pixelated;
   margin-bottom: .5em;
@@ -240,12 +265,25 @@ a.link {
 
 .LevelDetail {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 24px;
-  padding: 32px;
+  padding: 16px;
   background: #202850;
   border-radius: 6px;
   margin: auto 0;
+}
+
+@media screen and (min-width: 600px) {
+  .LevelDetail {
+    padding: 32px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.LevelDetail__thumb {
+  width: 100%;
+  max-width: none;
+  max-height: none;
 }
 
 .LevelDetail__title {
